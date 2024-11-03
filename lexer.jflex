@@ -282,7 +282,6 @@ ident = ([:jletter:] | "" ) ([:jletterdigit:] | [:jletter:] | "" )*
 	"width" { return symbolFactory.newSymbol("WIDTH", WIDTH);}
 	"xml:lang" { return symbolFactory.newSymbol("XML_LANG", XML_LANG);}
 	"xml:space" { return symbolFactory.newSymbol("XML_SPACE", XML_SPACE);}
-	"xmlns" { return symbolFactory.newSymbol("XMLNS", XMLNS);}
   	";"          	{ return symbolFactory.newSymbol("SEMI", SEMI);}
   	"\""			{ return symbolFactory.newSymbol("QUATATION_MARKS", QUATATION_MARKS);}
   	
