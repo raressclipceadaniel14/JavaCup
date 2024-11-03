@@ -225,7 +225,7 @@ ident = ([:jletter:] | "" ) ([:jletterdigit:] | [:jletter:] | "" )*
 	"poly" { return symbolFactory.newSymbol("POLY", POLY);}
 	"pre" { return symbolFactory.newSymbol("PRE", PRE);}
 	"profile" { return symbolFactory.newSymbol("PROFILE", PROFILE);}
-	"PUBLIC" { return symbolFactory.newSymbol("PUBLIC", PUBLIC);} 
+	
 	"q" { return symbolFactory.newSymbol("Q", Q);}
 	"radio" { return symbolFactory.newSymbol("RADIO", RADIO); }
 	"readonly" { return symbolFactory.newSymbol("READONLY", READONLY); }
@@ -285,7 +285,7 @@ ident = ([:jletter:] | "" ) ([:jletterdigit:] | [:jletter:] | "" )*
 	"xmlns" { return symbolFactory.newSymbol("XMLNS", XMLNS);}
   	";"          	{ return symbolFactory.newSymbol("SEMI", SEMI);}
   	"\""			{ return symbolFactory.newSymbol("QUATATION_MARKS", QUATATION_MARKS);}
-  	"&"			{ return symbolFactory.newSymbol("OPEN_SYMBOL", OPEN_SYMBOL);}
+  	
   	"</"			{ return symbolFactory.newSymbol("OPEN_CLOSING_TAG", OPEN_CLOSING_TAG);}
   	"="			{ return symbolFactory.newSymbol("ATTR_ASSIGN", ATTR_ASSIGN);}
   	">"			{ return symbolFactory.newSymbol("CLOSE_TAG", CLOSE_TAG);}
