@@ -1221,9 +1221,9 @@ class CUP$Parser$actions {
 		HtmlEl he = (HtmlEl)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG3
  
-				System.out.println("xhtml_document declaration");
+				System.out.println("xhtml_document");
 
-				HtmlEl rootHtmlEl = HtmlEl.createElement("Document", he);
+				HtmlEl rootHtmlEl = HtmlEl.createHtmlEl("Document", he);
 				root = rootHtmlEl;
 				RESULT = rootHtmlEl;
 				
@@ -1297,7 +1297,7 @@ class CUP$Parser$actions {
  
 				System.out.println("html_element declaration");
 
-				RESULT = HtmlEl.createElement("Html", ht, bt);
+				RESULT = HtmlEl.createHtmlEl("Html", ht, bt);
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("html_element",4, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-3)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1320,7 +1320,7 @@ class CUP$Parser$actions {
 
 				System.out.println("head_content declaration");
 
-				RESULT = HtmlEl.createElement("Head", tel);
+				RESULT = HtmlEl.createHtmlEl("Head", tel);
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("head_element",9, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1363,7 +1363,7 @@ class CUP$Parser$actions {
 
 				System.out.println("head_content declaration");
 
-				RESULT = HtmlEl.createElement("Body", tel);
+				RESULT = HtmlEl.createHtmlEl("Body", tel);
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("body_element",10, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1408,8 +1408,8 @@ class CUP$Parser$actions {
 		//@@CUPDBG14
 
 						System.out.println("tag_element_list declaration 1");
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 1", toe, tel1, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tel1, tce);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 1", toe, tel1, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tel1, tce);
 						RESULT.addBrother(tel2);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-3)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
@@ -1432,8 +1432,8 @@ class CUP$Parser$actions {
 		//@@CUPDBG15
 
 						System.out.println("tag_element_list declaration 2");
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 2", toe, tel1, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tel1, tce);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 2", toe, tel1, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tel1, tce);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1459,8 +1459,8 @@ class CUP$Parser$actions {
 
 						System.out.println("tag_element_list declaration 3");
 						toe.addChild(tit);
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 3", toe, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tce);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 3", toe, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tce);
 						RESULT.addBrother(tel);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-3)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
@@ -1484,8 +1484,8 @@ class CUP$Parser$actions {
 
 						System.out.println("tag_element_list declaration 4");
 						toe.addChild(tit);
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 4", toe, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tce);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 4", toe, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tce);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1511,8 +1511,8 @@ class CUP$Parser$actions {
 
 						System.out.println("tag_element_list declaration 4");
 						toe.addChild(tit);
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 4", toe, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tce, tel);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 4", toe, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tce, tel);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-3)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1531,8 +1531,8 @@ class CUP$Parser$actions {
 		//@@CUPDBG19
 
 						System.out.println("tag_element_list declaration 5");
-						//RESULT = HtmlEl.createElement("Tag HtmlEl List 5", toe, tce);
-						RESULT = HtmlEl.createElement("tel", toe, tce);
+						//RESULT = HtmlEl.createHtmlEl("Tag HtmlEl List 5", toe, tce);
+						RESULT = HtmlEl.createHtmlEl("tel", toe, tce);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_element_list",18, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-1)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1548,7 +1548,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG20
  
 				System.out.println("String Text"); 
-				RESULT = HtmlEl.createElement("Text");
+				RESULT = HtmlEl.createHtmlEl("Text");
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_inner_text",19, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1564,7 +1564,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG21
  
 				System.out.println("Number Text");
-				RESULT = HtmlEl.createElement("Text");
+				RESULT = HtmlEl.createHtmlEl("Text");
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_inner_text",19, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1584,7 +1584,7 @@ class CUP$Parser$actions {
  
 						System.out.println("tag_open_element declaration 1"); 
 						//ton.setChildren(List.of(al));
-						RESULT = HtmlEl.createElement(ton.getData(), ton, al);
+						RESULT = HtmlEl.createHtmlEl(ton.getData(), ton, al);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_element",17, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-3)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1600,7 +1600,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG23
  
 						System.out.println("tag_open_element declaration 2"); 
-						RESULT = HtmlEl.createElement(ton.getData(), ton);
+						RESULT = HtmlEl.createHtmlEl(ton.getData(), ton);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_element",17, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1616,7 +1616,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG24
  
 	System.out.println("tag_close_element declaration"); 
-	//RESULT = HtmlEl.createElement("Tag close element", tcn);
+	//RESULT = HtmlEl.createHtmlEl("Tag close element", tcn);
 
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_close_element",16, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-2)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1629,7 +1629,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG25
  
 					System.out.println("tag_open_name title");
-					RESULT = HtmlEl.createElement("Title");
+					RESULT = HtmlEl.createHtmlEl("Title");
 					
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
@@ -1642,7 +1642,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG26
  System.out.println("tag_open_name h1"); 
-					RESULT = HtmlEl.createElement("H1"); 
+					RESULT = HtmlEl.createHtmlEl("H1"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1654,7 +1654,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG27
  System.out.println("tag_open_name h2"); 
-					RESULT = HtmlEl.createElement("H2"); 
+					RESULT = HtmlEl.createHtmlEl("H2"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1666,7 +1666,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG28
  System.out.println("tag_open_name h3"); 
-					RESULT = HtmlEl.createElement("H3"); 
+					RESULT = HtmlEl.createHtmlEl("H3"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1678,7 +1678,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG29
  System.out.println("tag_open_name h4");
-					RESULT = HtmlEl.createElement("H4"); 
+					RESULT = HtmlEl.createHtmlEl("H4"); 
 					 
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1690,7 +1690,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG30
  System.out.println("tag_open_name h5"); 
-					RESULT = HtmlEl.createElement("H5"); 
+					RESULT = HtmlEl.createHtmlEl("H5"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1702,7 +1702,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG31
  System.out.println("tag_open_name h6"); 
-					RESULT = HtmlEl.createElement("H6"); 
+					RESULT = HtmlEl.createHtmlEl("H6"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1714,7 +1714,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG32
  System.out.println("tag_open_name div"); 
-					RESULT = HtmlEl.createElement("Div"); 
+					RESULT = HtmlEl.createHtmlEl("Div"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1726,7 +1726,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG33
  System.out.println("tag_open_name blockquote"); 
-					RESULT = HtmlEl.createElement("Blockquote"); 
+					RESULT = HtmlEl.createHtmlEl("Blockquote"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1738,7 +1738,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG34
  System.out.println("tag_open_name li"); 
-					RESULT = HtmlEl.createElement("Li"); 
+					RESULT = HtmlEl.createHtmlEl("Li"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1750,7 +1750,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG35
  System.out.println("tag_open_name ol"); 
-					RESULT = HtmlEl.createElement("Ol"); 
+					RESULT = HtmlEl.createHtmlEl("Ol"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1762,7 +1762,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG36
  System.out.println("tag_open_name p"); 
-					RESULT = HtmlEl.createElement("P"); 
+					RESULT = HtmlEl.createHtmlEl("P"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1774,7 +1774,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG37
  System.out.println("tag_open_name ul"); 
-					RESULT = HtmlEl.createElement("Ul"); 
+					RESULT = HtmlEl.createHtmlEl("Ul"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1786,7 +1786,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG38
  System.out.println("tag_open_name a"); 
-					RESULT = HtmlEl.createElement("A"); 
+					RESULT = HtmlEl.createHtmlEl("A"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1798,7 +1798,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG39
  System.out.println("tag_open_name b"); 
-					RESULT = HtmlEl.createElement("B"); 
+					RESULT = HtmlEl.createHtmlEl("B"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1810,7 +1810,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG40
  System.out.println("tag_open_name br"); 
-					RESULT = HtmlEl.createElement("Br"); 
+					RESULT = HtmlEl.createHtmlEl("Br"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1822,7 +1822,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG41
  System.out.println("tag_open_name i"); 
-					RESULT = HtmlEl.createElement("I"); 
+					RESULT = HtmlEl.createHtmlEl("I"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1834,7 +1834,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG42
  System.out.println("tag_open_name small"); 
-					RESULT = HtmlEl.createElement("Small"); 
+					RESULT = HtmlEl.createHtmlEl("Small"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1846,7 +1846,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG43
  System.out.println("tag_open_name span"); 
-					RESULT = HtmlEl.createElement("Span"); 
+					RESULT = HtmlEl.createHtmlEl("Span"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1858,7 +1858,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG44
  System.out.println("tag_open_name strong"); 
-					RESULT = HtmlEl.createElement("Strong"); 
+					RESULT = HtmlEl.createHtmlEl("Strong"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1870,7 +1870,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG45
  System.out.println("tag_open_name sub"); 
-					RESULT = HtmlEl.createElement("Sub"); 
+					RESULT = HtmlEl.createHtmlEl("Sub"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1882,7 +1882,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG46
  System.out.println("tag_open_name sup"); 
-					RESULT = HtmlEl.createElement("Sup"); 
+					RESULT = HtmlEl.createHtmlEl("Sup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1894,7 +1894,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG47
  System.out.println("tag_open_name rect"); 
-					RESULT = HtmlEl.createElement("Rect"); 
+					RESULT = HtmlEl.createHtmlEl("Rect"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1906,7 +1906,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG48
  System.out.println("tag_open_name circle"); 
-					RESULT = HtmlEl.createElement("Circle"); 
+					RESULT = HtmlEl.createHtmlEl("Circle"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1918,7 +1918,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG49
  System.out.println("tag_open_name poly"); 
-					RESULT = HtmlEl.createElement("Poly"); 
+					RESULT = HtmlEl.createHtmlEl("Poly"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1930,7 +1930,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG50
  System.out.println("tag_open_name default"); 
-					RESULT = HtmlEl.createElement("Default"); 
+					RESULT = HtmlEl.createHtmlEl("Default"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1942,7 +1942,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG51
  System.out.println("tag_open_name bdo"); 
-					RESULT = HtmlEl.createElement("Bdo"); 
+					RESULT = HtmlEl.createHtmlEl("Bdo"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1954,7 +1954,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG52
  System.out.println("tag_open_name map"); 
-					RESULT = HtmlEl.createElement("Map"); 
+					RESULT = HtmlEl.createHtmlEl("Map"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1966,7 +1966,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG53
  System.out.println("tag_open_name object"); 
-					RESULT = HtmlEl.createElement("Object"); 
+					RESULT = HtmlEl.createHtmlEl("Object"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1978,7 +1978,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG54
  System.out.println("tag_open_name tt"); 
-					RESULT = HtmlEl.createElement("Tt"); 
+					RESULT = HtmlEl.createHtmlEl("Tt"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1990,7 +1990,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG55
  System.out.println("tag_open_name big"); 
-					RESULT = HtmlEl.createElement("Big"); 
+					RESULT = HtmlEl.createHtmlEl("Big"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2002,7 +2002,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG56
  System.out.println("tag_open_name em"); 
-					RESULT = HtmlEl.createElement("Em"); 
+					RESULT = HtmlEl.createHtmlEl("Em"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2014,7 +2014,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG57
  System.out.println("tag_open_name dfn"); 
-					RESULT = HtmlEl.createElement("Dfn"); 
+					RESULT = HtmlEl.createHtmlEl("Dfn"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2026,7 +2026,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG58
  System.out.println("tag_open_name code"); 
-					RESULT = HtmlEl.createElement("Code"); 
+					RESULT = HtmlEl.createHtmlEl("Code"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2038,7 +2038,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG59
  System.out.println("tag_open_name q"); 
-					RESULT = HtmlEl.createElement("Q"); 
+					RESULT = HtmlEl.createHtmlEl("Q"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2050,7 +2050,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG60
  System.out.println("tag_open_name samp"); 
-					RESULT = HtmlEl.createElement("Samp"); 
+					RESULT = HtmlEl.createHtmlEl("Samp"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2062,7 +2062,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG61
  System.out.println("tag_open_name kbd"); 
-					RESULT = HtmlEl.createElement("Kbd"); 
+					RESULT = HtmlEl.createHtmlEl("Kbd"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2074,7 +2074,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG62
  System.out.println("tag_open_name var"); 
-					RESULT = HtmlEl.createElement("Var"); 
+					RESULT = HtmlEl.createHtmlEl("Var"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2086,7 +2086,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG63
  System.out.println("tag_open_name cite"); 
-					RESULT = HtmlEl.createElement("Cite"); 
+					RESULT = HtmlEl.createHtmlEl("Cite"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2098,7 +2098,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG64
  System.out.println("tag_open_name abbr"); 
-					RESULT = HtmlEl.createElement("Abbr"); 
+					RESULT = HtmlEl.createHtmlEl("Abbr"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2110,7 +2110,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG65
  System.out.println("tag_open_name acronym"); 
-					RESULT = HtmlEl.createElement("Acronym"); 
+					RESULT = HtmlEl.createHtmlEl("Acronym"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2122,7 +2122,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG66
  System.out.println("tag_open_name input"); 
-					RESULT = HtmlEl.createElement("Input"); 
+					RESULT = HtmlEl.createHtmlEl("Input"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2134,7 +2134,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG67
  System.out.println("tag_open_name select"); 
-					RESULT = HtmlEl.createElement("Select"); 
+					RESULT = HtmlEl.createHtmlEl("Select"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2146,7 +2146,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG68
  System.out.println("tag_open_name textarea"); 
-					RESULT = HtmlEl.createElement("Textarea"); 
+					RESULT = HtmlEl.createHtmlEl("Textarea"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2158,7 +2158,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG69
  System.out.println("tag_open_name label"); 
-					RESULT = HtmlEl.createElement("Label"); 
+					RESULT = HtmlEl.createHtmlEl("Label"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2170,7 +2170,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG70
  System.out.println("tag_open_name button"); 
-					RESULT = HtmlEl.createElement("Button"); 
+					RESULT = HtmlEl.createHtmlEl("Button"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2182,7 +2182,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG71
  System.out.println("tag_open_name ins"); 
-					RESULT = HtmlEl.createElement("Ins"); 
+					RESULT = HtmlEl.createHtmlEl("Ins"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2194,7 +2194,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG72
  System.out.println("tag_open_name del"); 
-					RESULT = HtmlEl.createElement("Del"); 
+					RESULT = HtmlEl.createHtmlEl("Del"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2206,7 +2206,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG73
  System.out.println("tag_open_name script"); 
-					RESULT = HtmlEl.createElement("Script"); 
+					RESULT = HtmlEl.createHtmlEl("Script"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2218,7 +2218,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG74
  System.out.println("tag_open_name dl"); 
-					RESULT = HtmlEl.createElement("Dl"); 
+					RESULT = HtmlEl.createHtmlEl("Dl"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2230,7 +2230,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG75
  System.out.println("tag_open_name dt"); 
-					RESULT = HtmlEl.createElement("Dt"); 
+					RESULT = HtmlEl.createHtmlEl("Dt"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2242,7 +2242,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG76
  System.out.println("tag_open_name dd"); 
-					RESULT = HtmlEl.createElement("Dd"); 
+					RESULT = HtmlEl.createHtmlEl("Dd"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2254,7 +2254,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG77
  System.out.println("tag_open_name pre"); 
-					RESULT = HtmlEl.createElement("Pre"); 
+					RESULT = HtmlEl.createHtmlEl("Pre"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2266,7 +2266,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG78
  System.out.println("tag_open_name address"); 
-					RESULT = HtmlEl.createElement("Address"); 
+					RESULT = HtmlEl.createHtmlEl("Address"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2278,7 +2278,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG79
  System.out.println("tag_open_name fieldset"); 
-					RESULT = HtmlEl.createElement("Fieldset"); 
+					RESULT = HtmlEl.createHtmlEl("Fieldset"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2290,7 +2290,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG80
  System.out.println("tag_open_name table"); 
-					RESULT = HtmlEl.createElement("Table"); 
+					RESULT = HtmlEl.createHtmlEl("Table"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2302,7 +2302,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG81
  System.out.println("tag_open_name form"); 
-					RESULT = HtmlEl.createElement("Form"); 
+					RESULT = HtmlEl.createHtmlEl("Form"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2314,7 +2314,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG82
  System.out.println("tag_open_name profile"); 
-					RESULT = HtmlEl.createElement("Profile"); 
+					RESULT = HtmlEl.createHtmlEl("Profile"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2326,7 +2326,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG83
  System.out.println("tag_open_name name"); 
-					RESULT = HtmlEl.createElement("Name"); 
+					RESULT = HtmlEl.createHtmlEl("Name"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2338,7 +2338,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG84
  System.out.println("tag_open_name content"); 
-					RESULT = HtmlEl.createElement("Content"); 
+					RESULT = HtmlEl.createHtmlEl("Content"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2350,7 +2350,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG85
  System.out.println("tag_open_name scheme");
-					RESULT = HtmlEl.createElement("Scheme"); 
+					RESULT = HtmlEl.createHtmlEl("Scheme"); 
 					 
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2362,7 +2362,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG86
  System.out.println("tag_open_name hreflang"); 
-					RESULT = HtmlEl.createElement("Hreflang"); 
+					RESULT = HtmlEl.createHtmlEl("Hreflang"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2374,7 +2374,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG87
  System.out.println("tag_open_name rel"); 
-					RESULT = HtmlEl.createElement("Rel"); 
+					RESULT = HtmlEl.createHtmlEl("Rel"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2386,7 +2386,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG88
  System.out.println("tag_open_name rev"); 
-					RESULT = HtmlEl.createElement("Rev"); 
+					RESULT = HtmlEl.createHtmlEl("Rev"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2398,7 +2398,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG89
  System.out.println("tag_open_name media"); 
-					RESULT = HtmlEl.createElement("Media"); 
+					RESULT = HtmlEl.createHtmlEl("Media"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2410,7 +2410,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG90
  System.out.println("tag_open_name noscript"); 
-					RESULT = HtmlEl.createElement("Noscript"); 
+					RESULT = HtmlEl.createHtmlEl("Noscript"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2422,7 +2422,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG91
  System.out.println("tag_open_name datetime"); 
-					RESULT = HtmlEl.createElement("Datetime"); 
+					RESULT = HtmlEl.createHtmlEl("Datetime"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2434,7 +2434,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG92
  System.out.println("tag_open_name shape"); 
-					RESULT = HtmlEl.createElement("Shape"); 
+					RESULT = HtmlEl.createHtmlEl("Shape"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2446,7 +2446,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG93
  System.out.println("tag_open_name coords"); 
-					RESULT = HtmlEl.createElement("Coords"); 
+					RESULT = HtmlEl.createHtmlEl("Coords"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2458,7 +2458,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG94
  System.out.println("tag_open_name param"); 
-					RESULT = HtmlEl.createElement("Param"); 
+					RESULT = HtmlEl.createHtmlEl("Param"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2470,7 +2470,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG95
  System.out.println("tag_open_name declare"); 
-					RESULT = HtmlEl.createElement("Declare"); 
+					RESULT = HtmlEl.createHtmlEl("Declare"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2482,7 +2482,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG96
  System.out.println("tag_open_name classid"); 
-					RESULT = HtmlEl.createElement("Classid"); 
+					RESULT = HtmlEl.createHtmlEl("Classid"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2494,7 +2494,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG97
  System.out.println("tag_open_name codebase"); 
-					RESULT = HtmlEl.createElement("Codebase"); 
+					RESULT = HtmlEl.createHtmlEl("Codebase"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2506,7 +2506,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG98
  System.out.println("tag_open_name data"); 
-					RESULT = HtmlEl.createElement("Data"); 
+					RESULT = HtmlEl.createHtmlEl("Data"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2518,7 +2518,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG99
  System.out.println("tag_open_name codetype"); 
-					RESULT = HtmlEl.createElement("Codetype"); 
+					RESULT = HtmlEl.createHtmlEl("Codetype"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2530,7 +2530,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG100
  System.out.println("tag_open_name archive"); 
-					RESULT = HtmlEl.createElement("Archive"); 
+					RESULT = HtmlEl.createHtmlEl("Archive"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2542,7 +2542,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG101
  System.out.println("tag_open_name standby"); 
-					RESULT = HtmlEl.createElement("Standby"); 
+					RESULT = HtmlEl.createHtmlEl("Standby"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2554,7 +2554,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG102
  System.out.println("tag_open_name value"); 
-					RESULT = HtmlEl.createElement("Value"); 
+					RESULT = HtmlEl.createHtmlEl("Value"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2566,7 +2566,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG103
  System.out.println("tag_open_name valuetype"); 
-					RESULT = HtmlEl.createElement("Valuetype"); 
+					RESULT = HtmlEl.createHtmlEl("Valuetype"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2578,7 +2578,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG104
  System.out.println("tag_open_name src"); 
-					RESULT = HtmlEl.createElement("Src"); 
+					RESULT = HtmlEl.createHtmlEl("Src"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2590,7 +2590,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG105
  System.out.println("tag_open_name alt"); 
-					RESULT = HtmlEl.createElement("Alt"); 
+					RESULT = HtmlEl.createHtmlEl("Alt"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2602,7 +2602,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG106
  System.out.println("tag_open_name longdesc"); 
-					RESULT = HtmlEl.createElement("Longdesc"); 
+					RESULT = HtmlEl.createHtmlEl("Longdesc"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2614,7 +2614,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG107
  System.out.println("tag_open_name ismap"); 
-					RESULT = HtmlEl.createElement("Ismap"); 
+					RESULT = HtmlEl.createHtmlEl("Ismap"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2626,7 +2626,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG108
  System.out.println("tag_open_name nohref"); 
-					RESULT = HtmlEl.createElement("Nohref"); 
+					RESULT = HtmlEl.createHtmlEl("Nohref"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2638,7 +2638,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG109
  System.out.println("tag_open_name action"); 
-					RESULT = HtmlEl.createElement("Action"); 
+					RESULT = HtmlEl.createHtmlEl("Action"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2650,7 +2650,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG110
  System.out.println("tag_open_name method"); 
-					RESULT = HtmlEl.createElement("Method"); 
+					RESULT = HtmlEl.createHtmlEl("Method"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2662,7 +2662,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG111
  System.out.println("tag_open_name enctype"); 
-					RESULT = HtmlEl.createElement("Enctype"); 
+					RESULT = HtmlEl.createHtmlEl("Enctype"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2674,7 +2674,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG112
  System.out.println("tag_open_name accept"); 
-					RESULT = HtmlEl.createElement("Accept"); 
+					RESULT = HtmlEl.createHtmlEl("Accept"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2686,7 +2686,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG113
  System.out.println("tag_open_name charset"); 
-					RESULT = HtmlEl.createElement("Charset"); 
+					RESULT = HtmlEl.createHtmlEl("Charset"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2698,7 +2698,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG114
  System.out.println("tag_open_name for"); 
-					RESULT = HtmlEl.createElement("For"); 
+					RESULT = HtmlEl.createHtmlEl("For"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2710,7 +2710,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG115
  System.out.println("tag_open_name text"); 
-					RESULT = HtmlEl.createElement("Text"); 
+					RESULT = HtmlEl.createHtmlEl("Text"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2722,7 +2722,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG116
  System.out.println("tag_open_name password"); 
-					RESULT = HtmlEl.createElement("Password"); 
+					RESULT = HtmlEl.createHtmlEl("Password"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2734,7 +2734,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG117
  System.out.println("tag_open_name checkbox"); 
-					RESULT = HtmlEl.createElement("Checkbox"); 
+					RESULT = HtmlEl.createHtmlEl("Checkbox"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2746,7 +2746,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG118
  System.out.println("tag_open_name radio"); 
-					RESULT = HtmlEl.createElement("Radio"); 
+					RESULT = HtmlEl.createHtmlEl("Radio"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2758,7 +2758,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG119
  System.out.println("tag_open_name submit"); 
-					RESULT = HtmlEl.createElement("Submit"); 
+					RESULT = HtmlEl.createHtmlEl("Submit"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2770,7 +2770,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG120
  System.out.println("tag_open_name reset"); 
-					RESULT = HtmlEl.createElement("Reset"); 
+					RESULT = HtmlEl.createHtmlEl("Reset"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2782,7 +2782,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG121
  System.out.println("tag_open_name file"); 
-					RESULT = HtmlEl.createElement("File");
+					RESULT = HtmlEl.createHtmlEl("File");
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
           return CUP$Parser$result;
@@ -2793,7 +2793,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG122
  System.out.println("tag_open_name hidden"); 
-					RESULT = HtmlEl.createElement("Hidden"); 
+					RESULT = HtmlEl.createHtmlEl("Hidden"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2805,7 +2805,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG123
  System.out.println("tag_open_name checked"); 
-					RESULT = HtmlEl.createElement("Checked"); 
+					RESULT = HtmlEl.createHtmlEl("Checked"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2817,7 +2817,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG124
  System.out.println("tag_open_name disabled"); 
-					RESULT = HtmlEl.createElement("Disabled"); 
+					RESULT = HtmlEl.createHtmlEl("Disabled"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2829,7 +2829,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG125
  System.out.println("tag_open_name readonly"); 
-					RESULT = HtmlEl.createElement("Readonly"); 
+					RESULT = HtmlEl.createHtmlEl("Readonly"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2841,7 +2841,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG126
  System.out.println("tag_open_name size"); 
-					RESULT = HtmlEl.createElement("Size"); 
+					RESULT = HtmlEl.createHtmlEl("Size"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2853,7 +2853,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG127
  System.out.println("tag_open_name maxlength"); 
-					RESULT = HtmlEl.createElement("Maxlength"); 
+					RESULT = HtmlEl.createHtmlEl("Maxlength"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2865,7 +2865,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG128
  System.out.println("tag_open_name onselect"); 
-					RESULT = HtmlEl.createElement("Onselect"); 
+					RESULT = HtmlEl.createHtmlEl("Onselect"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2877,7 +2877,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG129
  System.out.println("tag_open_name onchange"); 
-					RESULT = HtmlEl.createElement("Onchange"); 
+					RESULT = HtmlEl.createHtmlEl("Onchange"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2889,7 +2889,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG130
  System.out.println("tag_open_name multiple"); 
-					RESULT = HtmlEl.createElement("Multiple"); 
+					RESULT = HtmlEl.createHtmlEl("Multiple"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2901,7 +2901,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG131
  System.out.println("tag_open_name optgroup"); 
-					RESULT = HtmlEl.createElement("Optgroup"); 
+					RESULT = HtmlEl.createHtmlEl("Optgroup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2913,7 +2913,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG132
  System.out.println("tag_open_name option"); 
-					RESULT = HtmlEl.createElement("Option"); 
+					RESULT = HtmlEl.createHtmlEl("Option"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2925,7 +2925,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG133
  System.out.println("tag_open_name rows"); 
-					RESULT = HtmlEl.createElement("Rows"); 
+					RESULT = HtmlEl.createHtmlEl("Rows"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2937,7 +2937,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG134
  System.out.println("tag_open_name cols"); 
-					RESULT = HtmlEl.createElement("Cols"); 
+					RESULT = HtmlEl.createHtmlEl("Cols"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2949,7 +2949,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG135
  System.out.println("tag_open_name legend"); 
-					RESULT = HtmlEl.createElement("Legend"); 
+					RESULT = HtmlEl.createHtmlEl("Legend"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2961,7 +2961,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG136
  System.out.println("tag_open_name void"); 
-					RESULT = HtmlEl.createElement("Void"); 
+					RESULT = HtmlEl.createHtmlEl("Void"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2973,7 +2973,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG137
  System.out.println("tag_open_name above"); 
-					RESULT = HtmlEl.createElement("Above"); 
+					RESULT = HtmlEl.createHtmlEl("Above"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2985,7 +2985,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG138
  System.out.println("tag_open_name below"); 
-					RESULT = HtmlEl.createElement("Below"); 
+					RESULT = HtmlEl.createHtmlEl("Below"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -2997,7 +2997,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG139
  System.out.println("tag_open_name hsides"); 
-					RESULT = HtmlEl.createElement("Hsides"); 
+					RESULT = HtmlEl.createHtmlEl("Hsides"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3009,7 +3009,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG140
  System.out.println("tag_open_name lhs"); 
-					RESULT = HtmlEl.createElement("Lhs"); 
+					RESULT = HtmlEl.createHtmlEl("Lhs"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3021,7 +3021,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG141
  System.out.println("tag_open_name rhs"); 
-					RESULT = HtmlEl.createElement("Rhs"); 
+					RESULT = HtmlEl.createHtmlEl("Rhs"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3033,7 +3033,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG142
  System.out.println("tag_open_name vsides"); 
-					RESULT = HtmlEl.createElement("Vsides"); 
+					RESULT = HtmlEl.createHtmlEl("Vsides"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3045,7 +3045,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG143
  System.out.println("tag_open_name box"); 
-					RESULT = HtmlEl.createElement("Box"); 
+					RESULT = HtmlEl.createHtmlEl("Box"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3057,7 +3057,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG144
  System.out.println("tag_open_name border"); 
-					RESULT = HtmlEl.createElement("Border"); 
+					RESULT = HtmlEl.createHtmlEl("Border"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3069,7 +3069,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG145
  System.out.println("tag_open_name none"); 
-					RESULT = HtmlEl.createElement("None"); 
+					RESULT = HtmlEl.createHtmlEl("None"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3081,7 +3081,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG146
  System.out.println("tag_open_name groups"); 
-					RESULT = HtmlEl.createElement("Groups"); 
+					RESULT = HtmlEl.createHtmlEl("Groups"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3093,7 +3093,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG147
  System.out.println("tag_open_name all"); 
-					RESULT = HtmlEl.createElement("All"); 
+					RESULT = HtmlEl.createHtmlEl("All"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3105,7 +3105,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG148
  System.out.println("tag_open_name char"); 
-					RESULT = HtmlEl.createElement("Char"); 
+					RESULT = HtmlEl.createHtmlEl("Char"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3117,7 +3117,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG149
  System.out.println("tag_open_name charoff"); 
-					RESULT = HtmlEl.createElement("Charoff"); 
+					RESULT = HtmlEl.createHtmlEl("Charoff"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3129,7 +3129,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG150
  System.out.println("tag_open_name left"); 
-					RESULT = HtmlEl.createElement("Left"); 
+					RESULT = HtmlEl.createHtmlEl("Left"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3141,7 +3141,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG151
  System.out.println("tag_open_name center"); 
-					RESULT = HtmlEl.createElement("Center"); 
+					RESULT = HtmlEl.createHtmlEl("Center"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3153,7 +3153,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG152
  System.out.println("tag_open_name right"); 
-					RESULT = HtmlEl.createElement("Right"); 
+					RESULT = HtmlEl.createHtmlEl("Right"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3165,7 +3165,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG153
  System.out.println("tag_open_name justify"); 
-					RESULT = HtmlEl.createElement("Justify"); 
+					RESULT = HtmlEl.createHtmlEl("Justify"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3177,7 +3177,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG154
  System.out.println("tag_open_name valign"); 
-					RESULT = HtmlEl.createElement("Valign"); 
+					RESULT = HtmlEl.createHtmlEl("Valign"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3189,7 +3189,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG155
  System.out.println("tag_open_name top"); 
-					RESULT = HtmlEl.createElement("Top"); 
+					RESULT = HtmlEl.createHtmlEl("Top"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3201,7 +3201,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG156
  System.out.println("tag_open_name middle"); 
-					RESULT = HtmlEl.createElement("Middle"); 
+					RESULT = HtmlEl.createHtmlEl("Middle"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3213,7 +3213,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG157
  System.out.println("tag_open_name bottom"); 
-					RESULT = HtmlEl.createElement("Bottom"); 
+					RESULT = HtmlEl.createHtmlEl("Bottom"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3225,7 +3225,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG158
  System.out.println("tag_open_name baseline"); 
-					RESULT = HtmlEl.createElement("Baseline"); 
+					RESULT = HtmlEl.createHtmlEl("Baseline"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3237,7 +3237,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG159
  System.out.println("tag_open_name caption"); 
-					RESULT = HtmlEl.createElement("Caption"); 
+					RESULT = HtmlEl.createHtmlEl("Caption"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3249,7 +3249,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG160
  System.out.println("tag_open_name thead"); 
-					RESULT = HtmlEl.createElement("Thead"); 
+					RESULT = HtmlEl.createHtmlEl("Thead"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3261,7 +3261,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG161
  System.out.println("tag_open_name tfoot"); 
-					RESULT = HtmlEl.createElement("Tfoot"); 
+					RESULT = HtmlEl.createHtmlEl("Tfoot"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3273,7 +3273,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG162
  System.out.println("tag_open_name tbody"); 
-					RESULT = HtmlEl.createElement("Tbody"); 
+					RESULT = HtmlEl.createHtmlEl("Tbody"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3285,7 +3285,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG163
  System.out.println("tag_open_name colgroup"); 
-					RESULT = HtmlEl.createElement("Colgroup"); 
+					RESULT = HtmlEl.createHtmlEl("Colgroup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3297,7 +3297,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG164
  System.out.println("tag_open_name col"); 
-					RESULT = HtmlEl.createElement("Col"); 
+					RESULT = HtmlEl.createHtmlEl("Col"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3309,7 +3309,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG165
  System.out.println("tag_open_name tr"); 
-					RESULT = HtmlEl.createElement("Tr");
+					RESULT = HtmlEl.createHtmlEl("Tr");
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
           return CUP$Parser$result;
@@ -3320,7 +3320,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG166
  System.out.println("tag_open_name th"); 
-					RESULT = HtmlEl.createElement("Th"); 
+					RESULT = HtmlEl.createHtmlEl("Th"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3332,7 +3332,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG167
  System.out.println("tag_open_name td"); 
-					RESULT = HtmlEl.createElement("Td"); 
+					RESULT = HtmlEl.createHtmlEl("Td"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3344,7 +3344,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG168
  System.out.println("tag_open_name summary"); 
-					RESULT = HtmlEl.createElement("Summary"); 
+					RESULT = HtmlEl.createHtmlEl("Summary"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3356,7 +3356,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG169
  System.out.println("tag_open_name frame"); 
-					RESULT = HtmlEl.createElement("Frame"); 
+					RESULT = HtmlEl.createHtmlEl("Frame"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3368,7 +3368,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG170
  System.out.println("tag_open_name rules"); 
-					RESULT = HtmlEl.createElement("Rules"); 
+					RESULT = HtmlEl.createHtmlEl("Rules"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3380,7 +3380,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG171
  System.out.println("tag_open_name cellspacing"); 
-					RESULT = HtmlEl.createElement("Cellspacing"); 
+					RESULT = HtmlEl.createHtmlEl("Cellspacing"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3392,7 +3392,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG172
  System.out.println("tag_open_name cellpadding"); 
-					RESULT = HtmlEl.createElement("Cellpadding"); 
+					RESULT = HtmlEl.createHtmlEl("Cellpadding"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3404,7 +3404,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG173
  System.out.println("tag_open_name row"); 
-					RESULT = HtmlEl.createElement("Row"); 
+					RESULT = HtmlEl.createHtmlEl("Row"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3416,7 +3416,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG174
  System.out.println("tag_open_name rowgroup"); 
-					RESULT = HtmlEl.createElement("Rowgroup"); 
+					RESULT = HtmlEl.createHtmlEl("Rowgroup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3428,7 +3428,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG175
  System.out.println("tag_open_name axis"); 
-					RESULT = HtmlEl.createElement("Axis"); 
+					RESULT = HtmlEl.createHtmlEl("Axis"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3440,7 +3440,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG176
  System.out.println("tag_open_name headers"); 
-					RESULT = HtmlEl.createElement("Headers"); 
+					RESULT = HtmlEl.createHtmlEl("Headers"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3452,7 +3452,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG177
  System.out.println("tag_open_name scope"); 
-					RESULT = HtmlEl.createElement("Scope"); 
+					RESULT = HtmlEl.createHtmlEl("Scope"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3464,7 +3464,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG178
  System.out.println("tag_open_name rowspan"); 
-					RESULT = HtmlEl.createElement("Rowspan"); 
+					RESULT = HtmlEl.createHtmlEl("Rowspan"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3476,7 +3476,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG179
  System.out.println("tag_open_name colspan"); 
-					RESULT = HtmlEl.createElement("Colspan"); 
+					RESULT = HtmlEl.createHtmlEl("Colspan"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3488,7 +3488,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG180
  System.out.println("tag_open_name dir"); 
-					RESULT = HtmlEl.createElement("Dir"); 
+					RESULT = HtmlEl.createHtmlEl("Dir"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3500,7 +3500,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG181
  System.out.println("tag_open_name area"); 
-					RESULT = HtmlEl.createElement("Area"); 
+					RESULT = HtmlEl.createHtmlEl("Area"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3512,7 +3512,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG182
  System.out.println("tag_open_name base"); 
-					RESULT = HtmlEl.createElement("Base"); 
+					RESULT = HtmlEl.createHtmlEl("Base"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3524,7 +3524,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG183
  System.out.println("tag_open_name img"); 
-					RESULT = HtmlEl.createElement("Img"); 
+					RESULT = HtmlEl.createHtmlEl("Img"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3536,7 +3536,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG184
  System.out.println("tag_open_name hr"); 
-					RESULT = HtmlEl.createElement("Hr"); 
+					RESULT = HtmlEl.createHtmlEl("Hr"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3548,7 +3548,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG185
  System.out.println("tag_open_name meta"); 
-					RESULT = HtmlEl.createElement("Meta"); 
+					RESULT = HtmlEl.createHtmlEl("Meta"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3560,7 +3560,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG186
  System.out.println("tag_open_name link"); 
-					RESULT = HtmlEl.createElement("Link"); 
+					RESULT = HtmlEl.createHtmlEl("Link"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_open_name",15, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3579,8 +3579,8 @@ class CUP$Parser$actions {
 		//@@CUPDBG187
  
 						System.out.println("attribute_list declaration 1"); 
-						//RESULT = HtmlEl.createElement("attribute_list 1", a, al);
-						RESULT = HtmlEl.createElement(null, a, al);
+						//RESULT = HtmlEl.createHtmlEl("attribute_list 1", a, al);
+						RESULT = HtmlEl.createHtmlEl(null, a, al);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_list",11, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-1)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3596,8 +3596,8 @@ class CUP$Parser$actions {
 		//@@CUPDBG188
  
 						System.out.println("attribute_list declaration");
-						//RESULT = HtmlEl.createElement("attribute_list 2", a);
-						RESULT = HtmlEl.createElement(null, a);
+						//RESULT = HtmlEl.createHtmlEl("attribute_list 2", a);
+						RESULT = HtmlEl.createHtmlEl(null, a);
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_list",11, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3616,7 +3616,7 @@ class CUP$Parser$actions {
 		//@@CUPDBG189
  
 					System.out.println("attribute declaration"); 
-					RESULT = HtmlEl.createElement(an.getData() + " = \"" + ac.getData() + "\"", an, ac);
+					RESULT = HtmlEl.createHtmlEl(an.getData() + " = \"" + ac.getData() + "\"", an, ac);
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute",12, ((java_cup.runtime.Symbol)CUP$Parser$stack.elementAt(CUP$Parser$top-4)), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3631,7 +3631,7 @@ class CUP$Parser$actions {
 		String s = (String)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG190
  System.out.println("attribute_content string"); 
-					RESULT = HtmlEl.createElement("Text"); 
+					RESULT = HtmlEl.createHtmlEl("Text"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_content",13, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3646,7 +3646,7 @@ class CUP$Parser$actions {
 		Integer n = (Integer)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG191
  System.out.println("attribute_content number");  
-					RESULT = HtmlEl.createElement("Text"); 
+					RESULT = HtmlEl.createHtmlEl("Text"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_content",13, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3658,7 +3658,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG192
  System.out.println("attribute_name class");  
-					RESULT = HtmlEl.createElement("Class"); 
+					RESULT = HtmlEl.createHtmlEl("Class"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3670,7 +3670,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG193
  System.out.println("attribute_name id");  
-					RESULT = HtmlEl.createElement("Id"); 
+					RESULT = HtmlEl.createHtmlEl("Id"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3682,7 +3682,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG194
  System.out.println("attribute_name align");  
-					RESULT = HtmlEl.createElement("Align"); 
+					RESULT = HtmlEl.createHtmlEl("Align"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3694,7 +3694,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG195
  System.out.println("attribute_name style");  
-					RESULT = HtmlEl.createElement("Style"); 
+					RESULT = HtmlEl.createHtmlEl("Style"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3706,7 +3706,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG196
  System.out.println("attribute_name tabindex");  
-					RESULT = HtmlEl.createElement("Tabindex"); 
+					RESULT = HtmlEl.createHtmlEl("Tabindex"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3718,7 +3718,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG197
  System.out.println("attribute_name onclick");  
-					RESULT = HtmlEl.createElement("Onclick"); 
+					RESULT = HtmlEl.createHtmlEl("Onclick"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3730,7 +3730,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG198
  System.out.println("attribute_name ondblclick");  
-					RESULT = HtmlEl.createElement("Ondblclick"); 
+					RESULT = HtmlEl.createHtmlEl("Ondblclick"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3742,7 +3742,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG199
  System.out.println("attribute_name onmousedown");  
-					RESULT = HtmlEl.createElement("Onmousedown"); 
+					RESULT = HtmlEl.createHtmlEl("Onmousedown"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3754,7 +3754,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG200
  System.out.println("attribute_name onmouseup");  
-					RESULT = HtmlEl.createElement("Onmouseup"); 
+					RESULT = HtmlEl.createHtmlEl("Onmouseup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3766,7 +3766,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG201
  System.out.println("attribute_name onmousemove");  
-					RESULT = HtmlEl.createElement("Onmousemove"); 
+					RESULT = HtmlEl.createHtmlEl("Onmousemove"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3778,7 +3778,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG202
  System.out.println("attribute_name onmouseout");  
-					RESULT = HtmlEl.createElement("Onmouseout"); 
+					RESULT = HtmlEl.createHtmlEl("Onmouseout"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3790,7 +3790,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG203
  System.out.println("attribute_name onkeypress");  
-					RESULT = HtmlEl.createElement("Onkeypress"); 
+					RESULT = HtmlEl.createHtmlEl("Onkeypress"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3802,7 +3802,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG204
  System.out.println("attribute_name onkeydown");  
-					RESULT = HtmlEl.createElement("Onkeydown"); 
+					RESULT = HtmlEl.createHtmlEl("Onkeydown"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3814,7 +3814,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG205
  System.out.println("attribute_name onkeyup");  
-					RESULT = HtmlEl.createElement("Onkeyup"); 
+					RESULT = HtmlEl.createHtmlEl("Onkeyup"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3826,7 +3826,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG206
  System.out.println("attribute_name accesskey");  
-					RESULT = HtmlEl.createElement("Accesskey"); 
+					RESULT = HtmlEl.createHtmlEl("Accesskey"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3838,7 +3838,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG207
  System.out.println("attribute_name onfocus");  
-					RESULT = HtmlEl.createElement("Onfocus"); 
+					RESULT = HtmlEl.createHtmlEl("Onfocus"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3850,7 +3850,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG208
  System.out.println("attribute_name onblur");  
-					RESULT = HtmlEl.createElement("Onblur"); 
+					RESULT = HtmlEl.createHtmlEl("Onblur"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3862,7 +3862,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG209
  System.out.println("attribute_name href");  
-					RESULT = HtmlEl.createElement("Href"); 
+					RESULT = HtmlEl.createHtmlEl("Href"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3874,7 +3874,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG210
  System.out.println("attribute_name onsubmit");  
-					RESULT = HtmlEl.createElement("Onsubmit"); 
+					RESULT = HtmlEl.createHtmlEl("Onsubmit"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3886,7 +3886,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG211
  System.out.println("attribute_name onreset");  
-					RESULT = HtmlEl.createElement("Onreset"); 
+					RESULT = HtmlEl.createHtmlEl("Onreset"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3898,7 +3898,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG212
  System.out.println("attribute_name type");  
-					RESULT = HtmlEl.createElement("Type"); 
+					RESULT = HtmlEl.createHtmlEl("Type"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3910,7 +3910,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG213
  System.out.println("attribute_name height");  
-					RESULT = HtmlEl.createElement("Height"); 
+					RESULT = HtmlEl.createHtmlEl("Height"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3922,7 +3922,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG214
  System.out.println("attribute_name width");  
-					RESULT = HtmlEl.createElement("Width"); 
+					RESULT = HtmlEl.createHtmlEl("Width"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3934,7 +3934,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG215
  System.out.println("attribute_name usemap");  
-					RESULT = HtmlEl.createElement("Usemap"); 
+					RESULT = HtmlEl.createHtmlEl("Usemap"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3946,7 +3946,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG216
  System.out.println("attribute_name http_equiv");  
-					RESULT = HtmlEl.createElement("Http_equiv"); 
+					RESULT = HtmlEl.createHtmlEl("Http_equiv"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3958,7 +3958,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG217
  System.out.println("attribute_name xml_lang");  
-					RESULT = HtmlEl.createElement("Xml_lang"); 
+					RESULT = HtmlEl.createHtmlEl("Xml_lang"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3970,7 +3970,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG218
  System.out.println("attribute_name accept_charset");  
-					RESULT = HtmlEl.createElement("Accept_charset"); 
+					RESULT = HtmlEl.createHtmlEl("Accept_charset"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3982,7 +3982,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG219
  System.out.println("attribute_name xml_space");  
-					RESULT = HtmlEl.createElement("Xml_space"); 
+					RESULT = HtmlEl.createHtmlEl("Xml_space"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3994,7 +3994,7 @@ class CUP$Parser$actions {
               HtmlEl RESULT =null;
 		//@@CUPDBG220
  System.out.println("attribute_name lang");  
-					RESULT = HtmlEl.createElement("Lang"); 
+					RESULT = HtmlEl.createHtmlEl("Lang"); 
 					
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_name",14, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }

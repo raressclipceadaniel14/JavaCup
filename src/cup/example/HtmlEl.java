@@ -37,7 +37,7 @@ public class HtmlEl {
 		return children;
 	}
 	
-	public List<HtmlEl> getBrotherElements() {
+	public List<HtmlEl> getBrotherHtmlEls() {
 		return brotherElements;
 	}
 	
@@ -45,15 +45,15 @@ public class HtmlEl {
 		this.children = children;
 	}
 	
-	public static HtmlEl createElement(String elementName, HtmlEl... children) {
-		HtmlEl element = new HtmlEl(elementName);
+	public static HtmlEl createHtmlEl(String elementName, HtmlEl... children) {
+		HtmlEl htmlEl = new HtmlEl(elementName);
 
 	    for (HtmlEl child : children) {
 	        if (child != null) {
-	            element.addChild(child);
+	        	htmlEl.addChild(child);
 	        }
 	    }
 
-	    return element;
+	    return htmlEl;
 	}
 }
